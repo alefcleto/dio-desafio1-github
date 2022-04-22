@@ -1,1 +1,52 @@
-Inserir texto aqui
+Git e Github
+
+Terminal do Linux é derivado do Bash
+Terminal do Windows é derivado do Shell
+Logo, comandos para interação com o terminal são diferentes
+
+Comandos básicos
+Windows > Linux
+
+cd > cd (acessar diretório)
+dir > ls (listar diretórios e arquivos [-a para listar arquivos ocultos])
+mkdir > mkdir (criar diretório)
+cls > clear ou control+l (limpa painel de comando)
+del/rmdir > rm -rf (remove diretórios [rmdir /S /Q]  e arquivos [del])
+ > mv message.txt ./pasta/(mover arquivo para diretório)
+echo message > message.txt (cria arquivo com o texto inserido)
+seta para cima -> últimos comandos digitados
+> pwd (mostra caminho completo do diretório)
+
+Comandos no Git Bash
+
+Criando chaves SSH 
+ssh-keygen -t ed25519 -C email@email.com (gera chaves público e privada)
+cat id_ed25519.pub (código para link no Github)
+ssh-keygen -p (alterar passphrase chaves)
+
+eval $(ssh-agent -s)
+ls
+ssh-add id_ed25519
+
+
+git config --global user.email "email@email.com"
+git config --global user.name "name"
+git config --list (lista todas as configurações do git, q para sair)
+
+git init (inicia repositório)
+
+git status (verifica status do repositório, arquivos alterados e commitados)
+
+git add * (transfere todo o repositório para a staging area)
+
+git remote add origin url (adiciona destino do repositório)
+
+git remote -v (lista repositórios remotos cadastrados)
+
+git commit -m "string sobre o commit" (registra commit)
+
+git restore * (retorna todo o repositório para unstaged)
+
+git push origin master (transfere repositório para o repositório remoto/Github)
+
+git clone url (capta repositório do repositório remoto para repositório local)
